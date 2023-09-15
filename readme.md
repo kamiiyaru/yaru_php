@@ -23,3 +23,8 @@ use login_user
 use login_user
 /*result : Database changed*/
 ```
+
+## Note
+(en) This entire raw code is doesn't have further design, feel free to design it yourself
+
+(id) Seluruh kode ini masih mentah atau tanpa desain, silahkan mendesainnya sendiri
