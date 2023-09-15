@@ -17,7 +17,7 @@ cek databasenya ato tablenya ada ato ngak
 ```sql
 /*(en) if database not exist (id) kalo database gak ada*/
 use login_user
-/*result : ERROR 1049 (42000): Unknown database 'login'*/
+/*result : ERROR 1049 (42000): Unknown database 'login_user'*/
 
 /*(en) if database exist (id) kalo database ada*/
 use login_user
