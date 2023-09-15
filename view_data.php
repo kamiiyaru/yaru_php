@@ -30,25 +30,27 @@ $query = "SELECT * from user";
 
 $data = mysqli_query($conn, $query);
 
-echo "<table>";
-echo "<tr>";
-echo "<th>id</th>";
-echo "<th>nama depan</th>";
-echo "<th>nama belakang</th>";
-echo "<th>email</th>";
-echo "<th colspan='2'>action</th>";
-echo "</tr>";
 
-while($row = mysqli_fetch_array($data)){
-echo "<tr>";
-echo "<td>" . $row['id'] . "</td>";
-echo "<td>" . $row['nama_depan'] . "</td>";
-echo "<td>" . $row['nama_belakang'] . "</td>";
-echo "<td>" . $row['email'] . "</td>";
-echo "<td><a href='./system/delete.php?id=".$row['id']."'> DELETE </a></td>";
-echo "<td><a href='edit_user.php?id=".$row['id']."'>EDIT</a></td>";
-echo "</tr>";
-}
+	while($row = mysqli_fetch_array($data)){
+	echo "<table>";
+	echo "<tr>";
+	echo "<th>id</th>";
+	echo "<th>nama depan</th>";
+	echo "<th>nama belakang</th>";
+	echo "<th>email</th>";
+	echo "<th colspan='2'>action</th>";
+	echo "</tr>";
+	echo "<tr>";
+	echo "<td>" . $row['id'] . "</td>";
+	echo "<td>" . $row['nama_depan'] . "</td>";
+	echo "<td>" . $row['nama_belakang'] . "</td>";
+	echo "<td>" . $row['email'] . "</td>";
+	echo "<td><a href='./system/delete.php?id=".$row['id']."'> DELETE </a></td>";
+	echo "<td><a href='edit_user.php?id=".$row['id']."'>EDIT</a></td>";
+	echo "</tr>";
+
+
+	}
 
 echo "</table>";
 ?>
