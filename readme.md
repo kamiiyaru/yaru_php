@@ -1,7 +1,7 @@
 # Php by Kamiiyaru
 simple database
 
-##IMPORTANT!!
+## IMPORTANT!!
 (en)
 database name **SHOULD** be login_user or if you want to change it, change all the db name variable in connect.php or other php file. Table name **SHOULD** be user or change all the table name by yourself. If you not follow it I ain't got no responsible if the code not work 
 
