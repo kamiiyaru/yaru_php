@@ -30,8 +30,6 @@ $query = "SELECT * from user";
 
 $data = mysqli_query($conn, $query);
 
-
-	while($row = mysqli_fetch_array($data)){
 	echo "<table>";
 	echo "<tr>";
 	echo "<th>id</th>";
@@ -41,6 +39,8 @@ $data = mysqli_query($conn, $query);
 	echo "<th colspan='2'>action</th>";
 	echo "</tr>";
 	echo "<tr>";
+
+	while($row = mysqli_fetch_array($data)){
 	echo "<td>" . $row['id'] . "</td>";
 	echo "<td>" . $row['nama_depan'] . "</td>";
 	echo "<td>" . $row['nama_belakang'] . "</td>";
