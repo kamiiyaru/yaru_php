@@ -30,15 +30,22 @@ $query = "SELECT * from user";
 
 $data = mysqli_query($conn, $query);
 
-	echo "<table>";
-	echo "<tr>";
-	echo "<th>id</th>";
-	echo "<th>nama depan</th>";
-	echo "<th>nama belakang</th>";
-	echo "<th>email</th>";
-	echo "<th colspan='2'>action</th>";
-	echo "</tr>";
-	echo "<tr>";
+$sql = "SELECT count(id) as count from user";
+$result = mysqli_query($conn, $sql);
+
+if ($result && $result->num_rows > 0) {
+    $row = $result->fetch_assoc();
+    if ($row["count"] > 0) {
+		echo "<table>";
+		echo "<tr>";
+		echo "<th>id</th>";
+		echo "<th>nama depan</th>";
+		echo "<th>nama belakang</th>";
+		echo "<th>email</th>";
+		echo "<th colspan='2'>action</th>";
+		echo "</tr>";
+		echo "<tr>";
+
 
 	while($row = mysqli_fetch_array($data)){
 	echo "<td>" . $row['id'] . "</td>";
@@ -51,11 +58,15 @@ $data = mysqli_query($conn, $query);
 
 
 	}
+    } else {
+        echo "stuped no data dumbass<br>";
+		echo "<img src='https://media.tenor.com/zdcbh9URQCsAAAAC/bonk-doge.gif'>";
+    }
+}
 
 echo "</table>";
 ?>
-
+<br>
 <a href="index.php"><button style="margin-top: 50px;">get back asshole</button></a>
-
 </body>
 </html>
